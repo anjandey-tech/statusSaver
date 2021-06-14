@@ -3,12 +3,19 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context = ".WhatsappActivity "
-
         android:background="#f8f7fc">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+
 
         <RelativeLayout
             android:id="@+id/rel"
@@ -38,8 +45,36 @@
         </RelativeLayout>
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/rel">
+
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tabLayout"
+                app:tabGravity="fill"
+                android:elevation="3dp"
+                android:background="@drawable/tab_rect"
+                android:layout_margin="12dp"
+               app:tabIndicatorHeight="0dp"
+                app:tabMode="fixed"
+                app:tabRippleColor="@null"
+                app:tabSelectedTextColor="@color/black"
+                app:tabTextColor="@color/purple_200"
+                app:tabTextAppearance="@style/TabLayout"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/viewPager"/>
 
 
 
-    </RelativeLayout>
+          </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
 </layout>
