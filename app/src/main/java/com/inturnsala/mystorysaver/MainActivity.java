@@ -21,12 +21,21 @@ private ActivityMainBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-      //  setContentView(R.layout.activity_main);
+
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
         binding.whatApp.setOnClickListener(v -> {
           startActivity(new Intent(this,WhatsappActivity.class));
 
         });
+
+
+
+        binding.faceBook.setOnClickListener(v -> {
+            startActivity(new Intent(this,FacebookActivity.class));
+
+        });
+
+
         checkpermission();
     }
 
