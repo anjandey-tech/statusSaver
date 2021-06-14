@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context = ".WhatsappActivity "
+
+        android:background="#f8f7fc">
+
+        <RelativeLayout
+            android:id="@+id/rel"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="#F4D168">
+
+            <ImageView
+                android:id="@+id/sharechat"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/whatsapp_logo"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="whatapp"
+                android:layout_below="@id/sharechat"
+                android:layout_centerHorizontal="true"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:textStyle="italic"
+                android:layout_marginTop="10dp"/>
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+</layout>
