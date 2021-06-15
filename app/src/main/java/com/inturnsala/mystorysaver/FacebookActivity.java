@@ -14,52 +14,98 @@ import org.jsoup.nodes.Document;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-public class FacebookActivity extends AppCompatActivity {
-    private ActivityFacebookBinding binding;
-    private FacebookActivity activity;
+public class FacebookActivity extends AppCompatActivity
+{
+    ActivityFacebookBinding binding;
+    FacebookActivity activity;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_facebook);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_facebook);
         activity = this;
-        binding.downloadbtn.setOnClickListener(v->{
-            getFaceBookData();}); }
+        binding.downloadbtn.setOnClickListener(v -> {
+            getFaceBookData();
+        });
+    }
 
-    private void getFaceBookData()
-    { URL url = null;
+    private void getFaceBookData() {
         try {
-            url = new URL(binding.fbUrl.getText().toString());
+            URL url = new URL(binding.fbUrl.getText().toString());
             String host = url.getHost();
-            if(host.contains("facebook.com"))
-            {
-             new CallGetfbData().execute(binding.fbUrl.getText().toString());
-            }
-            else Toast.makeText(activity,"Url is invalid",Toast.LENGTH_SHORT).show();
-        }
-        catch (MalformedURLException e)
-        {
+            if (host.contains("facebook.com")) {
+                new CallGetfbData().execute(binding.fbUrl.getText().toString());
+            } else Toast.makeText(activity, "Url is invalid", Toast.LENGTH_SHORT).show();
+        } catch (MalformedURLException e) {
             e.printStackTrace();
-        } }
+        }
+    }
 
 
+    class CallGetfbData extends AsyncTask<String, Void, Document> {
+        Document fbDocs;
 
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
 
-    class CallGetfbData  extends AsyncTask<String, Void, Document>
-    {
- Document fbDocs;
         @Override
         protected Document doInBackground(String... strings) {
-            try { fbDocs = Jsoup.connect(strings[0]).get();
+            try {
+                fbDocs = Jsoup.connect(strings[0]).get();
             } catch (IOException e) {
                 e.printStackTrace();
             }
             return fbDocs;
         }
+
         @Override
         protected void onPostExecute(Document document) {
-              String videourl = document.select("meta[property=\"og:Video\"]").last()
-        .attr("Content");
+            try {
 
-            if(!videourl.equals(""))
-                Util.download(videourl,Util.RootDirectoryFacebook,activity,"facebook "+ System.currentTimeMillis()+".mp4");
-        }}}
+
+                String videourl = document.select("meta[property=\"og:video\"]").last().attr("content");
+
+                if (!videourl.equals("")) {
+                    try {
+
+
+                        Util.download(videourl, Util.RootDirectoryFacebook, activity, "facebook" + System.currentTimeMillis()+ ".mp4");
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                } else {
+
+                }
+            } catch (NullPointerException e)
+            {
+                Toast.makeText(FacebookActivity.this,"null error",Toast.LENGTH_SHORT).show();
+                e.printStackTrace();
+            }
+
+
+        }
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

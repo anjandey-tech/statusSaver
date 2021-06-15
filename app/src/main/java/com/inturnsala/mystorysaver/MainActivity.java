@@ -35,6 +35,11 @@ private ActivityMainBinding binding;
 
         });
 
+        binding.shareChat.setOnClickListener(v -> {
+            startActivity(new Intent(this,ShareChatActivity.class));
+
+        });
+
 
         checkpermission();
     }
