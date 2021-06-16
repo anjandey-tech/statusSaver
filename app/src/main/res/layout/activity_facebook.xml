@@ -80,7 +80,7 @@
                     android:layout_marginLeft="8dp"
                     android:layout_height="wrap_content"
                     android:text="paste"
-                    android:id="@+id/pastebtn"
+                    android:id="@+id/facebookPaste"
                     android:padding="16dp"/>
 
 
