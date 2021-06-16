@@ -40,6 +40,11 @@ private ActivityMainBinding binding;
 
         });
 
+        binding.instagram.setOnClickListener(v -> {
+            startActivity(new Intent(this,InstagramAvtivity.class));
+
+        });
+
 
         checkpermission();
     }
