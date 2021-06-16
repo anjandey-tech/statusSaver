@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyStorySaver">
-        <activity android:name=".InstagramAvtivity"></activity>
+        <activity android:name=".YouTubeActivity"></activity>
+        <activity android:name=".InstagramAvtivity" />
         <activity android:name=".WhatsappActivity" />
         <activity android:name=".FacebookActivity" />
         <activity android:name=".ShareChatActivity" />
