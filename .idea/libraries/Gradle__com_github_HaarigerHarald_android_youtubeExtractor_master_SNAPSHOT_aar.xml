@@ -4,10 +4,14 @@
       <root url="jar://$PROJECT_DIR$/../AndroidStudioProjects/caches/transforms-2/files-2.1/9526eac186aa4d2edbe793b3fb438de4/jetified-android-youtubeExtractor-master-SNAPSHOT/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../AndroidStudioProjects/caches/transforms-2/files-2.1/9526eac186aa4d2edbe793b3fb438de4/jetified-android-youtubeExtractor-master-SNAPSHOT/res" />
       <root url="file://$PROJECT_DIR$/../AndroidStudioProjects/caches/transforms-2/files-2.1/9526eac186aa4d2edbe793b3fb438de4/jetified-android-youtubeExtractor-master-SNAPSHOT/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../AndroidStudioProjects/caches/transforms-2/files-2.1/31a6d671064e5bae193221fd666fd888/jetified-android-youtubeExtractor-master-SNAPSHOT/res" />
+      <root url="file://$PROJECT_DIR$/../AndroidStudioProjects/caches/transforms-2/files-2.1/31a6d671064e5bae193221fd666fd888/jetified-android-youtubeExtractor-master-SNAPSHOT/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../AndroidStudioProjects/caches/transforms-2/files-2.1/31a6d671064e5bae193221fd666fd888/jetified-android-youtubeExtractor-master-SNAPSHOT/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$PROJECT_DIR$/../AndroidStudioProjects/caches/modules-2/files-2.1/com.github.HaarigerHarald/android-youtubeExtractor/master-SNAPSHOT/c04bfe6f85eb20f3098a578c742eab29502bdcb3/android-youtubeExtractor-master-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../AndroidStudioProjects/caches/modules-2/files-2.1/com.github.HaarigerHarald/android-youtubeExtractor/master-SNAPSHOT/6679735cc855c2ca8b973b772a09f03e9b5aec15/android-youtubeExtractor-master-SNAPSHOT-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

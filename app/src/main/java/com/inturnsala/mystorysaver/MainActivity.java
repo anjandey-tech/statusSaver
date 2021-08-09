@@ -44,8 +44,10 @@ private ActivityMainBinding binding;
             startActivity(new Intent(this,InstagramAvtivity.class));
 
         });
-        binding.youTube.setOnClickListener(v -> {
-            startActivity(new Intent(this, YouTubeActivity.class));
+        binding.youTube.setOnClickListener(v ->
+
+        {
+           startActivity(new Intent(this, YouTubeActivity.class));
 
         });
 

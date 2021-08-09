@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".InstagramAvtivity"
+        android:background="#f8f7fc">
+
+        <RelativeLayout
+            android:id="@+id/rel"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="#F4D168">
+
+            <ImageView
+                android:id="@+id/intagram"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/insta_logo"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Instagram"
+                android:layout_below="@id/intagram"
+                android:layout_centerHorizontal="true"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:textStyle="italic"
+                android:layout_marginTop="10dp"/>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rel">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/input"
+                android:padding="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/instaUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="paste Url" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/input"
+                android:weightSum="2"
+                android:layout_marginHorizontal="16dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:text="download"
+                    android:id="@+id/downloadbtn"
+                    android:padding="16dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_height="wrap_content"
+                    android:text="paste"
+                    android:id="@+id/pastebtn"
+                    android:padding="16dp"/>
+
+
+
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</layout>
